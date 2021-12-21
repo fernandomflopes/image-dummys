@@ -27,15 +27,14 @@ def generate_noise_image(path):
             j[1] = randint(0, 255)
             j[2] = randint(0, 255)
 
-
     cv.imwrite(os.path.join(path, new_name()), img) 
 
     return img 
 
 if __name__ == '__main__':
     media_path = os.path.abspath("media")
+    if not os.path.exists(media_path):
+        os.mkdir(media_path)
     files = os.listdir(media_path)
     #generate_image(media_path, files[randint(0, len(files) - 1)])
     generate_noise_image(media_path)
-
-
