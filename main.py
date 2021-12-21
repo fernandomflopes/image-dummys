@@ -31,10 +31,12 @@ def generate_noise_image(path):
 
     return img 
 
-if __name__ == '__main__':
+def get_media_path():
     media_path = os.path.abspath("media")
     if not os.path.exists(media_path):
         os.mkdir(media_path)
-    files = os.listdir(media_path)
-    #generate_image(media_path, files[randint(0, len(files) - 1)])
-    generate_noise_image(media_path)
+    return media_path
+
+
+if __name__ == '__main__':
+    generate_noise_image(get_media_path())
