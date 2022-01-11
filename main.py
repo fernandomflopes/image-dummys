@@ -39,4 +39,5 @@ def get_media_path():
 
 
 if __name__ == '__main__':
-    generate_noise_image(get_media_path())
+    for i in range(0, 10):
+        generate_noise_image(get_media_path())
