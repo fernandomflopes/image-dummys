@@ -39,5 +39,11 @@ def get_media_path():
 
 
 if __name__ == '__main__':
-    for i in range(0, 10):
+    import sys
+
+    if len(sys.argv) > 0 and sys.argv[1] == "-t":
+        if int(sys.argv[2]) > 0:
+            for i in range(0, int(sys.argv[2])):
+                generate_noise_image(get_media_path())
+    else:
         generate_noise_image(get_media_path())
