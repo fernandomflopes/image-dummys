@@ -6,7 +6,7 @@ import numpy as np
 from random import randint
 
 def new_name():
-    return str(time.time()).replace(".", "") + ".jpg"
+    return str(time.time()).replace(".", "") + ".png"
 
 def generate_image(path, image_name):
     img = cv.imread(os.path.join(media_path, image_name))
